@@ -1,1 +1,0 @@
-# EARTH_LINK
