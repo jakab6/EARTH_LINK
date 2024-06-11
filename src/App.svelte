@@ -1,5 +1,6 @@
+<!-- src/App.svelte -->
 <script>
-  import { onMount} from "svelte";
+  import { onMount } from "svelte";
   import * as Cesium from "cesium";
   import getViewer from "./lib/Viewer";
   import addPin from "./lib/AddPin.js";
@@ -9,11 +10,10 @@
   import keyboardEvent from "./lib/KeyboardEvent";
   import SideBar from "./lib/SideBar.svelte";
   import ImageAdder from "./lib/PostAdder.svelte";
+  import VRScene from './components/VRScene.svelte';  // Importujte nový VR komponent
 
   let content;
   let viewer;
-
-
 
   onMount(async () => {
     viewer = await getViewer();
@@ -85,9 +85,6 @@
       }
     }, Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK);
 
-
-    
-   
   });
 
   function setContent(id) {
@@ -120,12 +117,13 @@
     addedPost[post.id] = post;
     cachePost = undefined;
   }
-
-
 </script>
 
 <main>
   <div id="cesiumContainer" />
+  
+  <!-- VRScene komponent pre VR -->
+  <VRScene />
 
   {#if content != undefined}
     <Post
@@ -154,8 +152,8 @@
     width: 100px;
     height: 80px;
     position: absolute;
-    right: 20;
-    top: 100;
+    right: 20px;
+    top: 100px;
     display: none;
   }
 
