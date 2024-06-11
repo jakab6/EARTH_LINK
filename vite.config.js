@@ -1,10 +1,10 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import cesium from 'vite-plugin-cesium'
+import { defineConfig } from 'vite';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+import cesium from 'vite-plugin-cesium';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte(),cesium()],
+  plugins: [svelte(), cesium()],
   build: {
     rollupOptions: {
       output: {
@@ -15,4 +15,4 @@ export default defineConfig({
   server: {
     port: 5173,
   }
-})
+});
