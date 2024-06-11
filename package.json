@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
@@ -20,10 +21,12 @@
     "cesium": "1.111",
     "svelte-material-icons": "^3.0.5",
     "three": "^0.165.0",
-    "vite-plugin-cesium": "^1.2.22"
+    "vite-plugin-cesium": "^1.2.22",
+    "express": "^4.17.1",    // Pridajte Express.js na server-side rendering
+    "http-proxy-middleware": "^2.0.6"  // Pridajte proxy middleware, ak je potrebný
   },
-  "description": "This is the code I of EarthLink for Google's immersive geospatial challenge.",
-  "main": "key.config.js",
+  "description": "This is the code of EarthLink for Google's immersive geospatial challenge.",
+  "main": "server.js",  // Nastavte server.js ako vstupný bod pre aplikáciu
   "author": "",
   "license": "ISC"
 }
