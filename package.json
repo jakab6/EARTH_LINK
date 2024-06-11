@@ -1,0 +1,29 @@
+{
+  "name": "demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "svelte": "^4.0.5",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.106.0",
+    "@react-three/fiber": "^8.16.8",
+    "@types/three": "^0.165.0",
+    "cesium": "1.111",
+    "svelte-material-icons": "^3.0.5",
+    "three": "^0.165.0",
+    "vite-plugin-cesium": "^1.2.22"
+  },
+  "description": "This is the code I of EarthLink for Google's immersive geospatial challenge.",
+  "main": "key.config.js",
+  "author": "",
+  "license": "ISC"
+}
